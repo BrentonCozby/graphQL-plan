@@ -13,6 +13,12 @@ import {
 	ApolloClient
 } from "react-apollo";
 
+const networkInterface = createNetworkInterface({
+	uri: "https://api.graph.cool/simple/v1/cj2unxm79z1gj0169vkjy8k96"
+});
+
+const client = new ApolloClient({ networkInterface });
+
 class App extends Component {
 	state = {
 		recipes: [],
