@@ -1,34 +1,27 @@
-import React from 'react'
-import './RecipePage.css'
+import React, { Component } from "react";
+import { gql, graphql } from "react-apollo";
+import "./RecipePage.css";
 
-const RecipePage = ({ recipe }) => {
-    const {
-        title,
-        image,
-        description,
-        ingredients,
-        instructions
-    } = recipe
-
-    return (
-        <div className="RecipePage">
-            <h2 className="title">{title}</h2>
-            <img src={image} alt={title} />
-            <p className="description">{description}</p>
-            <h4>Ingredients</h4>
-            <ul className="ingredients">
-                {ingredients.map(ingredient => (
-                    <li key={ingredient}>{ingredient}</li>
-                ))}
-            </ul>
-            <h4>Instructions</h4>
-            <ol className="instructions">
-                {instructions.map(instruction => (
-                    <li key={instruction}>{instruction}</li>
-                ))}
-            </ol>
-        </div>
-    )
+class RecipePage extends Component {
+	static propTypes = {
+		data: React.PropTypes.shape({
+			loading: React.PropTypes.bool,
+			allRecipes: React.PropTypes.object
+		}).isRequired
+	};
+	render() {
+		return <div />;
+	}
 }
 
-export default RecipePage
+const recipeQuery = gql`
+  query recipeQuery {
+    allRecipes {
+      title
+    }
+  }
+`;
+
+const RecipeWithData = graphql(recipeQuery)(RecipePage);
+
+export default RecipeWithData;

@@ -4,17 +4,16 @@ import "./App.css";
 import Card from "./Card.js";
 import { defaultRecipes } from "./data.js";
 import RecipePage from "./RecipePage.js";
+import AddRecipe from "./AddRecipe";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import {
-	gql,
-	graphql,
 	ApolloProvider,
 	createNetworkInterface,
 	ApolloClient
 } from "react-apollo";
 
 const networkInterface = createNetworkInterface({
-	uri: "https://api.graph.cool/simple/v1/cj2unxm79z1gj0169vkjy8k96"
+	uri: "https://api.graph.cool/simple/v1/cj3z0g8hv2or7015613e1wy36"
 });
 
 const client = new ApolloClient({ networkInterface });
@@ -64,7 +63,7 @@ class App extends Component {
 	};
 
 	renderRecipePage = () => {
-		return <RecipePage recipe={this.state.active} />;
+		return <RecipePage />;
 	};
 
 	render() {
@@ -77,12 +76,14 @@ class App extends Component {
 							<h2>Welcome to React</h2>
 						</div>
 						<Link to="/recipes">View All Recipes</Link>
+						<Link to="/addrecipe">Add A Recipe</Link>
 						<Route exact path="/recipes" component={this.renderRecipes} />
 						<Route
 							exact
 							path="/recipes/:id"
 							component={this.renderRecipePage}
 						/>
+						<Route exact path="/addrecipe" component={AddRecipe} />
 					</div>
 				</Router>
 			</ApolloProvider>

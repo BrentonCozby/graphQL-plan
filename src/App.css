@@ -29,3 +29,12 @@
     align-items: flex-start;
     flex-flow: row wrap;
 }
+
+.inputField {
+  font-size: 1rem;
+  border-top: none;
+  border-right: hidden;
+  border-left: hidden;
+  outline: none;
+  border-color: black;
+}
