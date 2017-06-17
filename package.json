@@ -7,7 +7,9 @@
         "react": "^15.5.4",
         "react-apollo": "^1.4.2",
         "react-dom": "^15.5.4",
-        "react-router-dom": "next"
+        "react-router-dom": "next",
+        "subscriptions-transport-ws": "^0.7.3",
+        "tachyons": "^4.7.4"
     },
     "devDependencies": {
         "react-scripts": "0.9.5"

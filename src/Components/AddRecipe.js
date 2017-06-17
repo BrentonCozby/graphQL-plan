@@ -91,9 +91,7 @@ class CreateRecipe extends Component {
 		await this.props.addPost({
 			variables: { title, description, image, ingredients, instructions }
 		});
-
-		this.setState({ showForm: !this.state.showForm });
-		this.setState({ showSuccess: !this.state.showSuccess });
+		this.props.history.push("/");
 	};
 
 	// Async/Await explanation
