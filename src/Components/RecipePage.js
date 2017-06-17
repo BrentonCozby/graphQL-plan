@@ -37,22 +37,26 @@ class RecipePage extends Component {
 							backgroundPosition: "center"
 						}}
 					/>
-					<div className="description">
-						{Recipe.title}
+					<div className="text">
+						<div className="title">
+							{Recipe.title}
+						</div>
+						<div className="description">
+							{Recipe.description}
+						</div>
+						<p className="label">Ingredients</p>
+						<ul className="description">
+							{Recipe.ingredients.map((ingredient, index) =>
+								<li key={index}>{ingredient}</li>
+							)}
+						</ul>
+						<p className="label">Instructions</p>
+						<ol className="description">
+							{Recipe.instructions.map((instruction, index) =>
+								<li key={index}>{instruction}</li>
+							)}
+						</ol>
 					</div>
-					<div className="description">
-						{Recipe.description}
-					</div>
-					<ul className="description">
-						{Recipe.ingredients.map((ingredient, index) =>
-							<li key={index}>{ingredient}</li>
-						)}
-					</ul>
-					<ul className="description">
-						{Recipe.instructions.map((instruction, index) =>
-							<li key={index}>{instruction}</li>
-						)}
-					</ul>
 				</div>
 			</div>
 		);
