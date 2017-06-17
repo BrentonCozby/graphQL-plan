@@ -95,6 +95,29 @@ class CreateRecipe extends Component {
 		this.setState({ showForm: !this.state.showForm });
 		this.setState({ showSuccess: !this.state.showSuccess });
 	};
+
+	// Async/Await explanation
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+	//
+	// function resolveAfter2Seconds(x) {
+	//   return new Promise(resolve => {
+	//     setTimeout(() => {
+	//       resolve(x);
+	//     }, 2000);
+	//   });
+	// }
+	//
+	// async function add2(x) {
+	//   console.log('Loading...')
+	//   var a = await resolveAfter2Seconds(20);
+	//   var b = await resolveAfter2Seconds(30);
+	//   console.log('Done')
+	//   return x + a + b;
+	// }
+	//
+	// add2(10).then(v => {
+	//   console.log(v);  // prints 60 after 4 seconds.
+	// });
 }
 
 const addMutation = gql`
