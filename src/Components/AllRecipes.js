@@ -59,15 +59,15 @@ class ListPage extends Component {
 			);
 		}
 		return (
-			<div className="w-100 flex justify-center pa6">
-				<div className="w-100 flex flex-wrap" style={{ maxWidth: 1150 }}>
+			<div className="AllRecipes">
+				<div className="recipes-container" style={{ maxWidth: 1150 }}>
 					<Link
 						to="/add"
-						className="ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline">
+						className="box new-post">
 						<img
 							src={require("../assets/plus.svg")}
 							alt=""
-							className="plus mb3"
+							className="plus"
 						/>
 						<div>New Post</div>
 					</Link>

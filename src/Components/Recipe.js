@@ -5,7 +5,7 @@ class Recipe extends Component {
 	render() {
 		return (
 			<Link
-				className="bg-white ma3 box post flex flex-column no-underline br2"
+				className="box post"
 				to={`/recipe/${this.props.recipe.id}`}>
 				<div
 					className="image"
@@ -16,7 +16,7 @@ class Recipe extends Component {
 						paddingBottom: "100%"
 					}}
 				/>
-				<div className="flex items-center black-80 fw3 description">
+				<div className="description">
 					{this.props.recipe.description}
 				</div>
 			</Link>

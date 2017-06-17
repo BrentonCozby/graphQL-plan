@@ -19,16 +19,16 @@ class RecipePage extends Component {
 		return (
 			<div>
 				<div
-					className="close fixed right-0 top-0 pointer"
+					className="close"
 					onClick={this.props.history.goBack}>
 					<img src={require("../assets/close.svg")} alt="" />
 				</div>
 				<div
-					className="delete ttu white pointer fw6 absolute left-0 top-0 br2"
+					className="delete"
 					onClick={this.handleDelete}>
 					Delete
 				</div>
-				<div className="bg-white detail flex flex-column no-underline br2 h-100">
+				<div className="detail">
 					<div
 						className="image"
 						style={{
@@ -37,18 +37,18 @@ class RecipePage extends Component {
 							backgroundPosition: "center"
 						}}
 					/>
-					<div className="flex items-center black-80 fw3 description">
+					<div className="description">
 						{Recipe.title}
 					</div>
-					<div className="flex items-center black-80 fw3 description">
+					<div className="description">
 						{Recipe.description}
 					</div>
-					<ul className="flex items-center black-80 fw3 description">
+					<ul className="description">
 						{Recipe.ingredients.map((ingredient, index) =>
 							<li key={index}>{ingredient}</li>
 						)}
 					</ul>
-					<ul className="flex items-center black-80 fw3 description">
+					<ul className="description">
 						{Recipe.instructions.map((instruction, index) =>
 							<li key={index}>{instruction}</li>
 						)}

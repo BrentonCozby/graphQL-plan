@@ -9,7 +9,7 @@ import {
 	ApolloClient
 } from "react-apollo";
 // import { SubscriptionClient, addGraphQLSubscriptions } from 'subscriptions-transport-ws'
-import "tachyons";
+// import "tachyons";
 
 // const wsClient = new SubscriptionClient(
 // 	"wss://subscriptions.graph.cool/v1/cj3z0g8hv2or7015613e1wy36"
